@@ -8,6 +8,7 @@ const app = express()
 const port = process.env.PORT
 
 const routerUser = require('./src/routers/users')
+const routerLabel = require('./src/routers/label')
 
 app.use(cors())
 app.use(morgan('dev'))
@@ -15,5 +16,6 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
 app.use('/users', routerUser)
+app.use('/label', routerLabel)
 
 app.listen(port, () => console.log(`server running in port ${port}`))
