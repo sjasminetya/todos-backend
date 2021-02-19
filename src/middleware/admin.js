@@ -2,7 +2,6 @@ const {reject} = require('../helpers/helpers')
 
 exports.verfyAdmin = (req, res, next) => {
     const role = req.role
-    console.log(role)
     if (role === 1) {
         return next()
     } else {
