@@ -1,5 +1,5 @@
 const { response, reject } = require('../helpers/helpers')
-const { addLabel, checkLabel, getAllLabel, getLabelById, update, deleteLabel } = require('../models/label')
+const { addLabel, checkLabel, getAllLabel, getLabelById, update, deleteLabel, getTaskByLabel } = require('../models/label')
 const { v4: uuidv4 } = require('uuid')
 
 exports.addLabel = async (req, res) => {
@@ -44,6 +44,20 @@ exports.getLabelById = async (req, res) => {
     try {
         if (result.length === 0) {
             return reject(res, null, 400, { error: 'id not found' })
+        }
+        return response(res, result, 200, null)
+    } catch (error) {
+        console.log(error)
+    }
+}
+
+exports.getTaskByLabel = async (req, res) => {
+    const id = req.params.id
+
+    const result = await getTaskByLabel(id)
+    try {
+        if (result.length === 0) {
+            return reject(res, null, 400, { error: 'label not found' })
         }
         return response(res, result, 200, null)
     } catch (error) {

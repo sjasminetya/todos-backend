@@ -1,5 +1,5 @@
 const {response, reject} = require('../helpers/helpers')
-const {register, update, deleteUser, getUserById, checkUsername, getAllUser, addUser} = require('../models/users')
+const {register, update, deleteUser, getUserById, checkUsername, getAllUser, addUser, getTaskByIdUser} = require('../models/users')
 const bcrypt = require('bcrypt')
 const { v4: uuidv4 } = require('uuid')
 const jwt = require('jsonwebtoken')
@@ -145,6 +145,20 @@ exports.getAllUser = async (req, res) => {
               delete result[key].created_at
               delete result[key].update_at
             }
+        }
+        return response(res, result, 200, null)
+    } catch (error) {
+        console.log(error)
+    }
+}
+
+exports.getTaskByIdUser = async (req, res) => {
+    const id = req.params.id
+
+    const result = await getTaskByIdUser(id)
+    try {
+        if (result.length === 0) {
+            return reject(res, null, 400, { error: 'task not found' })
         }
         return response(res, result, 200, null)
     } catch (error) {

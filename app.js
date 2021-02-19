@@ -9,6 +9,7 @@ const port = process.env.PORT
 
 const routerUser = require('./src/routers/users')
 const routerLabel = require('./src/routers/label')
+const routerTask = require('./src/routers/task')
 
 app.use(cors())
 app.use(morgan('dev'))
@@ -17,5 +18,6 @@ app.use(bodyParser.json())
 
 app.use('/users', routerUser)
 app.use('/label', routerLabel)
+app.use('/task', routerTask)
 
 app.listen(port, () => console.log(`server running in port ${port}`))

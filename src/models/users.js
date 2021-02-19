@@ -24,6 +24,10 @@ exports.getUserById = (id) => {
     return query('SELECT * FROM users WHERE id = ?', id)
 }
 
+exports.getTaskByIdUser = (id) => {
+    return query('SELECT users.id, users.username, task.* FROM users INNER JOIN task ON users.id = task.userId WHERE users.id = ?', id)
+}
+
 exports.deleteUser = (id) => {
     return query('DELETE FROM users WHERE id = ?', id)
 }
