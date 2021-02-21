@@ -16,8 +16,8 @@ exports.getLabelById = (id) => {
     return query('SELECT * FROM label WHERE id = ?', id)
 }
 
-exports.getTaskByLabel = (id) => {
-    return query('SELECT label.*, task.* FROM label INNER JOIN task ON label.id = task.labelId WHERE label.id = ?', id)
+exports.getTaskByLabel = (userId) => {
+    return query('SELECT label.id, task.*, users.id as userId, users.name FROM label INNER JOIN task ON label.id = task.labelId INNER JOIN users ON userId = task.userId WHERE userId = ?', userId)
 }
 
 exports.update = (data, id) => {

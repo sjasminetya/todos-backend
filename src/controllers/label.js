@@ -52,8 +52,8 @@ exports.getLabelById = async (req, res) => {
 }
 
 exports.getTaskByLabel = async (req, res) => {
-    const id = req.params.id
-
+    const id = req.id
+    
     const result = await getTaskByLabel(id)
     try {
         if (result.length === 0) {

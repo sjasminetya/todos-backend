@@ -8,7 +8,7 @@ router
     .post('/admin/add-label', verifyAccess, verfyAdmin, addLabel)
     .get('/', verifyAccess, getAllLabel)
     .get('/:id', verifyAccess, getLabelById)
-    .get('/task/:id', verifyAccess, getTaskByLabel)
+    .get('/task/:userId', verifyAccess, getTaskByLabel)
     .patch('/:id', verifyAccess, verfyAdmin, update)
     .delete('/:id', verifyAccess, verfyAdmin, deleteLabel)
 
