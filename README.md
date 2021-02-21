@@ -7,14 +7,14 @@ git clone https://github.com/sjasminetya/todos-backend.git
 ```
 
 ### Built with
-* **[Node JS](https://nodejs.org/en/download/)**
-* **[Express JS](http://expressjs.com/en/starter/installing.html)**
+* **[`Node JS`](https://nodejs.org/en/download/)**
+* **[`Express JS`](http://expressjs.com/en/starter/installing.html)**
 
 ### Requirements
-* **[Node JS](https://nodejs.org/en/download/)**
-* **[Postman](https://www.postman.com/) => for testing**
-* **[Database](https://github.com/sjasminetya/todos-backend/blob/main/todos.sql) => export database**
-* **[Frontend Todos](https://github.com/sjasminetya/todos-frontend)**
+* **[`Node JS`](https://nodejs.org/en/download/)**
+* **[`Postman`](https://www.postman.com/) => for testing**
+* **[`Database`](https://github.com/sjasminetya/todos-backend/blob/main/todos.sql) => export database**
+* **[`Frontend Todos`](https://github.com/sjasminetya/todos-frontend)**
 
 ### Add env
 Create .env file in your root project folder.
