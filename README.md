@@ -13,8 +13,8 @@ git clone https://github.com/sjasminetya/todos-backend.git
 ### Requirements
 * **[Node JS](https://nodejs.org/en/download/)**
 * **[Postman](https://www.postman.com/) => for testing**
-* **[Database](https://github.com/sjasminetya/zwallet-backend/blob/main/ark_zwallet.sql) => export database**
-* **[Frontend Zwallet](https://github.com/sjasminetya/todos-frontend)**
+* **[Database](https://github.com/sjasminetya/todos-backend/blob/main/todos.sql) => export database**
+* **[Frontend Todos](https://github.com/sjasminetya/todos-frontend)**
 
 ### Add env
 Create .env file in your root project folder.
