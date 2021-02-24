@@ -14,7 +14,7 @@ git clone https://github.com/sjasminetya/todos-backend.git
 * **[`Node JS`](https://nodejs.org/en/download/)**
 * **[`Postman`](https://www.postman.com/) => for testing**
 * **[`Database`](https://github.com/sjasminetya/todos-backend/blob/main/todos.sql) => export database**
-* **[`Frontend Todos`](https://github.com/sjasminetya/todos-frontend)**
+* **[`Frontend Todos`](https://github.com/sjasminetya/todos-frontend-react)**
 
 ### Add env
 Create .env file in your root project folder.
